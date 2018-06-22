@@ -24,7 +24,7 @@
       <v-btn light target="new" href="https://github.com/LuisManuelNR/D3-Vue">
         <img class="mr-2" src="/static/img/github.svg" height="90%" alt="github">
         <span>github</span>
-        </v-btn>
+      </v-btn>
     </v-toolbar>
     <v-content>
       <v-container fluid>
@@ -36,6 +36,18 @@
         <span>examples of use vue.js with d3.js by Luis Manuel Noguerol Ramirez <a target="new" href="http://chazycub.com">chazycub.com</a> &copy; 2018</span>
       </v-flex>
     </v-footer>
+    <v-snackbar
+      :timeout="notification.timeout"
+      top
+      :value="notification.activo"
+      :color="notification.color"
+    >
+      {{ notification.text }}
+      <v-btn flat color="yellow"
+      @click.native="handleNotification">
+        {{ notification.btnText }}
+      </v-btn>
+    </v-snackbar>
   </v-app>
 </template>
 
@@ -49,6 +61,26 @@
         {link: '/map-chart', title: 'Map', icon: 'map'},
         {link: '/network-graph', title: 'Network Graph', icon: 'bubble_chart'}
       ]
-    })
+    }),
+    methods: {
+      handleNotification () {
+        if (this.notification.btnText === 'reload') {
+          location.reload(true)
+        } else {
+          this.$store.commit('notification', {
+            activo: false,
+            text: '',
+            timeout: null,
+            color: null,
+            btnText: 'close'
+          })
+        }
+      }
+    },
+    computed: {
+      notification () {
+        return this.$store.getters.notification
+      }
+    }
   }
 </script>

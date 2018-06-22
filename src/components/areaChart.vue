@@ -76,24 +76,24 @@ export default {
       let d1 = new Date(2008, 0, 1)
 
       svg.append('linearGradient')
-      .attr('id', 'temperature-gradient')
-      .attr('gradientUnits', 'userSpaceOnUse')
-      .attr('x1', 0).attr('y1', y(0))
-      .attr('x2', 0).attr('y2', y(height))
-      .selectAll('stop')
+        .attr('id', 'temperature-gradient')
+        .attr('gradientUnits', 'userSpaceOnUse')
+        .attr('x1', 0).attr('y1', y(0))
+        .attr('x2', 0).attr('y2', y(height))
+        .selectAll('stop')
         .data([
           {offset: '0%', color: 'steelblue'},
           {offset: '100%', color: 'red'}
         ])
-      .enter().append('stop')
+        .enter().append('stop')
         .attr('offset', function (d) { return d.offset })
         .attr('stop-color', function (d) { return d.color })
 
       svg.call(zoom).transition()
         .duration(1500)
         .call(zoom.transform, d3.zoomIdentity
-            .scale(width / (x(d1) - x(d0)))
-            .translate(-x(d0), 0))
+          .scale(width / (x(d1) - x(d0)))
+          .translate(-x(d0), 0))
     })
 
     function zoomed () {
