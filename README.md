@@ -1,6 +1,6 @@
 # d3vue
 
-> Examples using d3.js with vue.js
+> [Examples](https://d3-vue.firebaseapp.com/pie-chart) using d3.js and vuetify with vue.js
 
 ## Build Setup
 
