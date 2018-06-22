@@ -20,6 +20,11 @@
     <v-toolbar app fixed clipped-left dense>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>D3Vue</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn light target="new" href="https://github.com/LuisManuelNR/D3-Vue">
+        <img class="mr-2" src="/static/img/github.svg" height="90%" alt="github">
+        <span>github</span>
+        </v-btn>
     </v-toolbar>
     <v-content>
       <v-container fluid>
