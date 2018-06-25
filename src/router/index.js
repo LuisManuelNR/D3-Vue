@@ -36,6 +36,13 @@ export default new Router({
       component: resolve => {
         require(['../views/networkGraphView'], resolve)
       }
+    },
+    {
+      path: '/area-chart',
+      name: 'AreaChart',
+      component: resolve => {
+        require(['../views/areaChartView'], resolve)
+      }
     }
   ]
 })
