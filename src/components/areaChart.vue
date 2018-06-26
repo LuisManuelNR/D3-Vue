@@ -1,6 +1,6 @@
 <template>
   <v-flex>
-    <svg :width="width" :height="height"></svg>
+    <svg class="areaChartContainer" :width="width" :height="height"></svg>
   </v-flex>
 </template>
 
@@ -161,15 +161,15 @@ export default {
 </script>
 
 <style>
-  svg {
+  .areaChartContainer {
     user-select: none;
     background-color: #1b1b1b
   }
   .chart {
     stroke: white;
     stroke-width: 1;
-    fill: url(#temperature-gradient);
-    clip-path: url(#clip);
+    fill: url('#temperature-gradient');
+    clip-path: url('#clip');
   }
   .axis {
     font-size: 13px !important;

@@ -5,7 +5,8 @@
     @mousewheel.prevent="zoom"
     @mousedown.ctrl.exact="panEnabled = true"
     @mouseup="panEnabled = false"
-    @mousemove="pan">
+    @mousemove="pan"
+    class="networkChartContainer">
     <line v-for="(link, i) in dataSet.links" :key="'l'+i" class="links" />
     <g class="nodes" v-for="(node, i) in dataSet.nodes" :key="i">
       <circle
@@ -150,7 +151,7 @@ export default {
 </script>
 
 <style>
-  svg {
+  .networkChartContainer {
     user-select: none;
     background-color: #424242
   }
