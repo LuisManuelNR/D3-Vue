@@ -43,6 +43,13 @@ export default new Router({
       component: resolve => {
         require(['../views/areaChartView'], resolve)
       }
+    },
+    {
+      path: '/bar-chart',
+      name: 'BarChart',
+      component: resolve => {
+        require(['../views/barChartView'], resolve)
+      }
     }
   ]
 })

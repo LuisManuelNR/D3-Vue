@@ -24,10 +24,10 @@ export default {
     margin: {
       type: Object,
       default: () => ({
-        left: 10,
-        right: 10,
-        top: 20,
-        bottom: 20
+        left: 40,
+        right: 20,
+        top: 40,
+        bottom: 30
       })
     }
   },

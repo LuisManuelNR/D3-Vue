@@ -1,5 +1,5 @@
 <template>
-  <v-flex>
+  <v-flex xs12>
     <svg class="areaChartContainer" :width="width" :height="height"></svg>
   </v-flex>
 </template>
