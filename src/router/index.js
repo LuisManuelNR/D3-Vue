@@ -50,6 +50,13 @@ export default new Router({
       component: resolve => {
         require(['../views/barChartView'], resolve)
       }
+    },
+    {
+      path: '/cluster-dendogram',
+      name: 'ClusterDendogram',
+      component: resolve => {
+        require(['../views/clusterDendogramView'], resolve)
+      }
     }
   ]
 })

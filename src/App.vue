@@ -61,7 +61,8 @@
         {link: '/map-chart', title: 'Map', icon: 'map'},
         {link: '/network-graph', title: 'Network Graph', icon: 'bubble_chart'},
         {link: '/area-chart', title: 'Area Chart', icon: 'timeline'},
-        {link: '/bar-chart', title: 'Bar Chart', icon: 'bar_chart'}
+        {link: '/bar-chart', title: 'Bar Chart', icon: 'bar_chart'},
+        {link: '/cluster-dendogram', title: 'Cluster Dendogram', icon: 'line_style'}
       ]
     }),
     methods: {
